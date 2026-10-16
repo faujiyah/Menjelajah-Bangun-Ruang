@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Bangun Ruang - Kelas II SD/MI</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts untuk tampilan ramah anak -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- A. HALAMAN LOGIN -->
+    <section id="login-page" class="page active">
+        <div class="login-card">
+            <div class="mascot-container">🌟</div>
+            <h1>Belajar Bangun Ruang</h1>
+            <p>Yuk, kenalan sama bentuk-bentuk seru di sekitar kita!</p>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="student-name">Nama Lengkap:</label>
+                    <input type="text" id="student-name" placeholder="Contoh: Budi Santoso" required>
+                </div>
+                <div class="form-group">
+                    <label for="student-class">Kelas:</label>
+                    <input type="text" id="student-class" placeholder="Contoh: 2 A" required>
+                </div>
+                <button type="submit" class="btn-primary">Mulai Belajar 🚀</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- B. DASHBOARD / MENU UTAMA -->
+    <section id="dashboard-page" class="page">
+        <header class="main-header">
+            <div class="user-greeting">
+                <h2>Halo, <span id="display-name">Siswa</span>! 👋</h2>
+                <p>Kelas: <span id="display-class">-</span></p>
+            </div>
+            <button id="btn-logout" class="btn-secondary-small">Keluar</button>
+        </header>
+
+        <div class="dashboard-content">
+            <div class="welcome-banner">
+                <h3>Selamat Datang di Dunia Bangun Ruang! 🏰</h3>
+                <p>Pilihlah menu di bawah ini untuk mulai belajar, bermain, dan menguji kemampuanmu.</p>
+                <div class="progress-bar-container">
+                    <span>Progress Belajar Kamu: <strong id="progress-text">0%</strong></span>
+                    <div class="progress-bar"><div id="progress-fill" style="width: 0%;"></div></div>
+                </div>
+            </div>
+
+            <div class="menu-grid">
+                <div class="menu-card" onclick="app.navigateTo('materi-page')">
+                    <div class="menu-icon">📚</div>
+                    <h3>Materi</h3>
+                    <p>Pelajari benda ruang & bangun ruang</p>
+                </div>
+                <div class="menu-card" onclick="app.navigateTo('aktivitas-page')">
+                    <div class="menu-icon">🎮</div>
+                    <h3>Aktivitas Belajar</h3>
+                    <p>Asyiknya mengamati & mencocokkan</p>
+                </div>
+                <div class="menu-card" onclick="app.navigateTo('kuis-page')">
+                    <div class="menu-icon">❓</div>
+                    <h3>Kuis</h3>
+                    <p>Uji pemahamanmu lewat 10 soal seru</p>
+                </div>
+                <div class="menu-card" onclick="app.navigateTo('hasil-page')">
+                    <div class="menu-icon">🏆</div>
+                    <h3>Hasil Belajar</h3>
+                    <p>Lihat nilai dan pencapaianmu</p>
+                </div>
+                <div class="menu-card" onclick="app.navigateTo('petunjuk-page')">
+                    <div class="menu-icon">💡</div>
+                    <h3>Petunjuk</h3>
+                    <p>Cara asyik menggunakan media ini</p>
+                </div>
+                <div class="menu-card" onclick="app.navigateTo('tentang-page')">
+                    <div class="menu-icon">✨</div>
+                    <h3>Tentang Media</h3>
+                    <p>Informasi seputar aplikasi belajar</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- C. HALAMAN MATERI -->
+    <section id="materi-page" class="page">
+        <nav class="top-nav">
+            <button class="btn-back" onclick="app.navigateTo('dashboard-page')">⬅️ Menu Utama</button>
+            <h2>Materi Pembelajaran</h2>
+        </nav>
+        
+        <div class="materi-container">
+            <div class="card-materi active-slide" data-slide="1">
+                <h3>1. Pengertian Benda Ruang & Bangun Ruang</h3>
+                <p>Benda-benda di sekitar kita memiliki ukuran panjang, lebar, dan tinggi, serta memiliki isi (ruang) di dalamnya. Benda-benda ini dinamakan <strong>benda ruang</strong>.</p>
+                <p>Sedangkan <strong>bangun ruang</strong> adalah bentuk geometris dari benda tersebut yang memiliki ruang dan dapat diisi.</p>
+                <div class="example-box">
+                    <p><strong>Contoh dalam kehidupan sehari-hari:</strong> Dadu, bola sepak, kaleng susu, kotak pensil, dan topi ulang tahun.</p>
+                </div>
+            </div>
+
+            <div class="card-materi" data-slide="2">
+                <h3>2. Perbedaan Bangun Datar dan Bangun Ruang</h3>
+                <p>• <strong>Bangun Datar:</strong> Hanya memiliki permukaan datar (dua dimensi), seperti kertas gambar atau papan tulis tipis.</p>
+                <p>• <strong>Bangun Ruang:</strong> Memiliki ketebalan dan ruang (tiga dimensi) serta memiliki lebih dari satu permukaan.</p>
+                <div class="example-box">
+                    <p><strong>Tahukah kamu?</strong> Kita bisa menyusun beberapa bangun datar (persegi) menjadi satu bangun ruang (kubus)!</p>
+                </div>
+            </div>
+
+            <div class="card-materi" data-slide="3">
+                <h3>3. Mengenal Kubus dan Karakteristiknya</h3>
+                <p><strong>Kubus</strong> adalah bangun ruang yang bentuknya seperti dadu atau rubik.</p>
+                <ul>
+                    <li><strong>Sisi:</strong> Memiliki 6 sisi berbentuk persegi yang ukurannya sama besar.</li>
+                    <li><strong>Rusuk:</strong> Memiliki 12 garis tepi (rusuk).</li>
+                    <li><strong>Titik Sudut:</strong> Memiliki 8 pojok (titik sudut).</li>
+                </ul>
+                <div class="example-box">
+                    <p><strong>Contoh:</strong> Dadu permainan, kotak kado berbentuk kubus, dan rubik.</p>
+                </div>
+            </div>
+
+            <div class="card-materi" data-slide="4">
+                <h3>4. Mengenal Balok dan Karakteristiknya</h3>
+                <p><strong>Balok</strong> adalah bangun ruang yang bentuknya seperti kotak sepatu atau buku tebal.</p>
+                <ul>
+                    <li><strong>Sisi:</strong> Memiliki 6 sisi (sisi atas-bawah, depan-belakang, kiri-kanan).</li>
+                    <li><strong>Rusuk:</strong> Memiliki 12 rusuk.</li>
+                    <li><strong>Titik Sudut:</strong> Memiliki 8 titik sudut.</li>
+                </ul>
+                <div class="example-box">
+                    <p><strong>Contoh:</strong> Kotak sepatu, buku tulis tebal, dan penghapus papan tulis.</p>
+                </div>
+            </div>
+
+            <div class="card-materi" data-slide="5">
+                <h3>5. Mengenal Bola dan Karakteristiknya</h3>
+                <p><strong>Bola</strong> adalah bangun ruang yang seluruh permukaannya melengkung bundar.</p>
+                <ul>
+                    <li><strong>Sisi:</strong> Memiliki 1 sisi lengkung.</li>
+                    <li><strong>Rusuk:</strong> Tidak memiliki rusuk.</li>
+                    <li><strong>Titik Sudut:</strong> Tidak memiliki titik sudut.</li>
+                </ul>
+                <div class="example-box">
+                    <p><strong>Contoh:</strong> Bola sepak, kelereng, dan bola basket.</p>
+                </div>
+            </div>
+
+            <div class="card-materi" data-slide="6">
+                <h3>6. Mengenal Kerucut dan Karakteristiknya</h3>
+                <p><strong>Kerucut</strong> adalah bangun ruang yang memiliki alas lingkaran dan meruncing di bagian atasnya.</p>
+                <ul>
+                    <li><strong>Sisi:</strong> Memiliki 2 sisi (1 sisi alas lingkaran & 1 sisi selimut lengkung).</li>
+                    <li><strong>Rusuk:</strong> Memiliki 1 rusuk lengkung di bagian bawah.</li>
+                    <li><strong>Titik Sudut:</strong> Memiliki 1 titik puncak yang runcing.</li>
+                </ul>
+                <div class="example-box">
+                    <p><strong>Contoh:</strong> Topi ulang tahun dan cone es krim.</p>
+                </div>
+            </div>
+
+            <div class="card-materi" data-slide="7">
+                <h3>7. Mengenal Tabung dan Karakteristiknya</h3>
+                <p><strong>Tabung</strong> adalah bangun ruang yang memiliki tutup dan alas berbentuk lingkaran yang sama besar serta sisi lengkung di tengahnya.</p>
+                <ul>
+                    <li><strong>Sisi:</strong> Memiliki 3 sisi (tutup atas, alas bawah, dan selimut tabung).</li>
+                    <li><strong>Rusuk:</strong> Memiliki 2 rusuk lengkung berbentuk lingkaran.</li>
+                    <li><strong>Titik Sudut:</strong> Tidak memiliki titik sudut.</li>
+                </ul>
+                <div class="example-box">
+                    <p><strong>Contoh:</strong> Kaleng susu, celengan tabung, dan pipa air.</p>
+                </div>
+            </div>
+
+            <div class="navigation-buttons">
+                <button id="prev-materi" class="btn-secondary" onclick="app.changeSlide(-1)">Sebelumnya</button>
+                <span id="slide-indicator">1 dari 7</span>
+                <button id="next-materi" class="btn-primary" onclick="app.changeSlide(1)">Berikutnya</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- D. HALAMAN AKTIVITAS BELAJAR -->
+    <section id="aktivitas-page" class="page">
+        <nav class="top-nav">
+            <button class="btn-back" onclick="app.navigateTo('dashboard-page')">⬅️ Menu Utama</button>
+            <h2>Aktivitas Belajar Seru</h2>
+        </nav>
+        <div class="activity-container">
+            <div class="activity-box">
+                <h3>Ayo Amati dan Jawab!</h3>
+                <p id="act-question">Manakah benda di bawah ini yang berbentuk <strong>Kubus</strong>?</p>
+                
+                <div class="choices-grid" id="act-choices">
+                    <!-- Diisi lewat Javascript -->
+                </div>
+                <div id="act-feedback" class="feedback-msg"></div>
+                <button id="next-activity" class="btn-primary" style="display:none; margin-top:15px;" onclick="app.nextActivity()">Soal Aktivitas Berikutnya ➡️</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- E. HALAMAN KUIS -->
+    <section id="kuis-page" class="page">
+        <nav class="top-nav">
+            <button class="btn-back" onclick="app.navigateTo('dashboard-page')">⬅️ Menu Utama</button>
+            <h2>Kuis Bangun Ruang</h2>
+        </nav>
+        <div class="quiz-container">
+            <div id="quiz-box">
+                <div class="quiz-header">
+                    <span id="quiz-number">Soal 1 dari 10</span>
+                    <span id="quiz-timer">⏱️ Semangat!</span>
+                </div>
+                <h3 id="quiz-question">Pertanyaan kuis akan muncul di sini...</h3>
+                <div class="quiz-options" id="quiz-options">
+                    <!-- Pilihan ganda -->
+                </div>
+                <button id="btn-next-quiz" class="btn-primary" onclick="app.nextQuiz()" style="display:none; margin-top:20px;">Lanjut ➡️</button>
+            </div>
+
+            <div id="quiz-result-box" style="display:none;" class="result-card">
+                <h2>🎉 Kuis Selesai! 🎉</h2>
+                <p>Hebat, <span class="result-name"></span>!</p>
+                <div class="score-display">
+                    Nilai Kamu: <span id="final-score">0</span>
+                </div>
+                <ul class="score-details">
+                    <li>Jawaban Benar: <span id="correct-count">0</span></li>
+                    <li>Jawaban Salah: <span id="wrong-count">0</span></li>
+                    <li>Persentase: <span id="percentage-score">0%</span></li>
+                </ul>
+                <p id="result-status" class="status-text"></p>
+                <div class="result-actions">
+                    <button class="btn-primary" onclick="app.reviewQuiz()">Lihat Pembahasan 📝</button>
+                    <button class="btn-secondary" onclick="app.restartQuiz()">Ulangi Kuis 🔄</button>
+                    <button class="btn-primary" onclick="app.navigateTo('dashboard-page')">Kembali ke Dashboard 🏠</button>
+                </div>
+            </div>
+
+            <!-- Bagian Pembahasan -->
+            <div id="quiz-review-box" style="display:none;" class="review-card">
+                <h2>Pembahasan Soal Kuis</h2>
+                <div id="review-content"></div>
+                <button class="btn-primary" style="margin-top:20px;" onclick="app.navigateTo('dashboard-page')">Kembali ke Dashboard 🏠</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- F. HALAMAN HASIL BELAJAR -->
+    <section id="hasil-page" class="page">
+        <nav class="top-nav">
+            <button class="btn-back" onclick="app.navigateTo('dashboard-page')">⬅️ Menu Utama</button>
+            <h2>Hasil Belajar</h2>
+        </nav>
+        <div class="result-card" style="max-width: 500px; margin: 30px auto;">
+            <h3>📊 Rekam Jejak Belajar</h3>
+            <div class="score-details" style="text-align: left; margin: 20px 0;">
+                <p><strong>Nama:</strong> <span id="res-name">-</span></p>
+                <p><strong>Kelas:</strong> <span id="res-class">-</span></p>
+                <p><strong>Nilai Kuis Terakhir:</strong> <span id="res-score">Belum ada nilai</span></p>
+                <p><strong>Jawaban Benar:</strong> <span id="res-correct">-</span></p>
+                <p><strong>Jawaban Salah:</strong> <span id="res-wrong">-</span></p>
+                <p><strong>Status:</strong> <span id="res-status">Belum mengerjakan kuis</span></p>
+            </div>
+            <button class="btn-primary" onclick="app.navigateTo('dashboard-page')">Kembali ke Menu</button>
+        </div>
+    </section>
+
+    <!-- G. HALAMAN PETUNJUK -->
+    <section id="petunjuk-page" class="page">
+        <nav class="top-nav">
+            <button class="btn-back" onclick="app.navigateTo('dashboard-page')">⬅️ Menu Utama</button>
+            <h2>Petunjuk Penggunaan</h2>
+        </nav>
+        <div class="info-card">
+            <h3>Cara Asyik Belajar di Sini:</h3>
+            <ol>
+                <li>Masukkan <strong>Nama</strong> dan <strong>Kelas</strong> kamu di halaman depan.</li>
+                <li>Pilih menu <strong>Materi</strong> untuk membaca dan mengenal bentuk bangun ruang.</li>
+                <li>Uji kemampuanmu lewat menu <strong>Aktivitas Belajar</strong> yang seru dan interaktif.</li>
+                <li>Kerjakan soal latihan di menu <strong>Kuis</strong> untuk menguji pengetahuanmu.</li>
+                <li>Cek nilai dan prestasi belajarmu di menu <strong>Hasil Belajar</strong>.</li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- H. HALAMAN TENTANG MEDIA -->
+    <section id="tentang-page" class="page">
+        <nav class="top-nav">
+            <button class="btn-back" onclick="app.navigateTo('dashboard-page')">⬅️ Menu Utama</button>
+            <h2>Tentang Media Pembelajaran</h2>
+        </nav>
+        <div class="info-card">
+            <h3>✨ Media Pintar Bangun Ruang</h3>
+            <p><strong>Mata Pelajaran:</strong> Matematika Kelas II SD/MI</p>
+            <p><strong>Materi Utama:</strong> Mengenal Bangun Ruang (Kubus, Balok, Bola, Kerucut, Tabung serta unsur-unsurnya).</p>
+            <p><strong>Sasaran Pengguna:</strong> Siswa Kelas II SD/MI (Usia 7–8 tahun).</p>
+            <p><strong>Tujuan Media:</strong> Membantu siswa memahami konsep bentuk tiga dimensi secara visual, menyenangkan, dan kontekstual dengan kehidupan sehari-hari.</p>
+            <hr style="margin: 15px 0; border: 0; border-top: 1px solid #ddd;">
+            <p style="font-size: 0.9rem; color: #666;">Didesain khusus dengan cinta untuk pendidikan anak Indonesia yang interaktif dan menyenangkan! 🌟</p>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
